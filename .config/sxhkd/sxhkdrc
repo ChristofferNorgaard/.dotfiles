@@ -1,0 +1,18 @@
+# Increase volume
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# Decrease volume
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -5%
+        
+# Toggle between English and Slovenian keyboard layouts
+super  + space
+     setxkbmap -query | grep -q "us" && setxkbmap -layout si || setxkbmap -layout us
+
+super + shift + s
+	maim -q -s | xclip -selection clipboard -t image/png 
+
+# Launch file manager
+super + f
+	dmenufm    
